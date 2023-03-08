@@ -38,7 +38,7 @@ const Navbar = () => {
                 <div className={`items-center flex-shrink-0 hidden lg:flex space-x-5`}>
                     {
                         user?.uid ?
-                            <Link to='/login'><button className='bg-green-900 p-2 rounded-md hover:bg-green-400' onClick={handlelogOut}>Log out</button></Link>
+                            <Link to='/login'><button className='bg-green-900 text-white p-2 rounded-md hover:bg-green-400' onClick={handlelogOut}>Log out</button></Link>
                             :
                             <Link to='/login'><Button>Login</Button></Link>
                     }
@@ -50,7 +50,7 @@ const Navbar = () => {
                     <SwitchButton toggleTheme={toggleTheme} theme={theme}></SwitchButton>
                     {
                         user?.photoURL ?
-                            <img alt="" className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-violet-400 ring-offset-gray-800" src={user?.photoURL} />
+                            <img alt="" className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-green-500 ring-offset-gray-800" src={user?.photoURL} />
                             :
                             <ImUser className='w-10 h-10'></ImUser>
                     }
