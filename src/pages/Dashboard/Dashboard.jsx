@@ -9,7 +9,6 @@ const Dashboard = () => {
             <Navbar></Navbar>
             <div className='max-w-5xl mx-auto py-40 flex'>
                 <aside className='w-64 border-4 border-green-900 rounded-lg h-96'>
-
                     <div className='p-2'>
                         <Link to='/dashboard/add_services'><Buttonlg>Add Services</Buttonlg></Link>
                         <Link to='/dashboard/users'><Buttonlg>Users</Buttonlg></Link>

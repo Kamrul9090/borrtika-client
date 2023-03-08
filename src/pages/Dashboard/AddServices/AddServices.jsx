@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import { Buttonlg } from '../../../components/Button/Button';
 
 const AddServices = () => {
@@ -21,18 +22,18 @@ const AddServices = () => {
             body: formData
         })
             .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    console.log(data);
+            .then(imgData => {
+                if (imgData.success) {
                     const addBook = {
                         type: data.select,
-                        img: data.data.display_url,
+                        img: imgData.data.display_url,
                         book_name: data.book_name,
                         writer: data.writer,
                         price: data.original_price,
                         resale_price: data.resale_price,
                         seller_name: data.seller_name,
                         use: data.year_of_use,
+                        book: data.pieces,
                         formatDate,
                     }
 
@@ -44,7 +45,11 @@ const AddServices = () => {
                         body: JSON.stringify(addBook)
                     })
                         .then(res => res.json())
-                        .then(data => console.log(data));
+                        .then(data => {
+                            if (data.acknowledged) {
+                                toast.success("Your post Added")
+                            }
+                        });
 
                 }
             })
@@ -93,6 +98,10 @@ const AddServices = () => {
                 <div className='flex flex-col'>
                     <label htmlFor="name">seller name</label>
                     <input {...register("seller_name")} className="outline rounded-lg" type="text" />
+                </div>
+                <div className='flex flex-col'>
+                    <label htmlFor="name">Pieces</label>
+                    <input {...register("pieces")} className="outline rounded-lg" type="text" />
                 </div>
                 <Buttonlg>Add Services</Buttonlg>
             </form>

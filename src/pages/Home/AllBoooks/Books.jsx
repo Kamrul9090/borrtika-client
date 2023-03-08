@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import Carousel from 'react-grid-carousel'
-import { useLoaderData } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
 import { AuthContext } from '../../../context/AuthProvider';
 import { Button } from '../../../components/Button/Button';
 const Books = ({ categoriesData }) => {
     const { loader } = useContext(AuthContext)
-    console.log(categoriesData);
     if (loader) {
         <BarLoader></BarLoader>
     }
@@ -15,7 +13,7 @@ const Books = ({ categoriesData }) => {
             <Carousel cols={3} showDots loop>
                 {categoriesData.map((val, i) => (
                     <Carousel.Item key={i}>
-                        <div className=' w-full max-h-full'>
+                        <div className='w-full max-h-full'>
                             <div className='max-h-40'>
                                 <img src={val.img} className="w-full max-h-40" />
                             </div>

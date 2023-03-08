@@ -4,8 +4,10 @@ import Main from "../layout/Main";
 import AddServices from "../pages/Dashboard/AddServices/AddServices";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import DisplayCategoryBooks from "../pages/DisplayCategoryBooks/DisplayCategoryBooks";
-import BookLayout from "../pages/Home/AllBoooks/BookLayout";
 import Books from "../pages/Home/AllBoooks/Books";
+import DisplayAddBooks from "../pages/Home/DisplayAddBooks/DisplayAddBooks";
+import DisplayDonationBooks from "../pages/Home/DisplayAddBooks/DisplayDonationBooks/DisplayDonationBooks";
+import DisplaySellerBooks from "../pages/Home/DisplayAddBooks/DisplayDonationBooks/DisplaySellerBooks";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp";
@@ -46,6 +48,20 @@ export const router = createBrowserRouter([
             {
                 path: '/category/other',
                 element: <Home><Books></Books></Home>
+            },
+            {
+                path: '/',
+                element: <Home><DisplayAddBooks></DisplayAddBooks></Home>,
+                children: [
+                    {
+                        path: '/donation',
+                        element: <DisplayDonationBooks></DisplayDonationBooks>
+                    },
+                    {
+                        path: '/seller',
+                        element: <DisplaySellerBooks></DisplaySellerBooks>
+                    }
+                ]
             },
             {
                 path: '/login',
