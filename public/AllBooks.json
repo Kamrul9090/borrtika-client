@@ -1,0 +1,322 @@
+[
+    {
+        "book_name": "হিমু",
+        "writer_name": "হুমায়ুন আহমেদ",
+        "img": "https://i.ibb.co/G727ZXp/himu.jpg",
+        "price": 320,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "1 May 2022",
+        "book": 2
+    },
+    {
+        "book_name": "আমি",
+        "writer_name": "হুমায়ুন আহমেদ",
+        "img": "https://i.ibb.co/82q7fRG/ami.jpg",
+        "price": 230,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 May 2021",
+        "book": 1
+    },
+    {
+        "book_name": "মেঘের মেয়ে",
+        "writer_name": "হুমায়ুন আহমেদ",
+        "img": "https://i.ibb.co/M8t9KN7/meger-caya.jpg",
+        "price": 224,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "6 May 2020",
+        "book": 5
+    },
+    {
+        "book_name": "একজন মায়াবতী",
+        "writer_name": "হুমায়ুন আহমেদ",
+        "img": "https://i.ibb.co/yBfZPDp/akjon-mayaboti.jpg",
+        "price": 100,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "5 Jan 2020",
+        "book": 4
+    },
+    {
+        "book_name": "অপেক্ষা",
+        "writer_name": "হুমায়ুন আহমেদ",
+        "img": "https://i.ibb.co/1GXhCQm/opekka.jpg",
+        "price": 200,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "3 May 2020",
+        "book": 1
+    },
+    {
+        "book_name": "নববী",
+        "writer_name": "হুমায়ুন আহমেদ",
+        "img": "https://i.ibb.co/K0Vyn7z/nobobi.jpg",
+        "price": 502,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "শ্রেষ্ঠ উপন্যাস",
+        "writer_name": "রবীন্দ্রনাথ ঠাকুর",
+        "img": "https://i.ibb.co/9g79w0V/robindo.jpg",
+        "price": 900,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "শ্রেষ্ঠ উপন্যাস",
+        "writer_name": "আহমদ ছফা",
+        "img": "https://i.ibb.co/Y2CWW9B/cresto-uponnash.jpg",
+        "price": 69,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "পুতুল নাচের ইতিকথা",
+        "writer_name": "মানিক বন্দ্যোপাধ্যায়",
+        "img": "https://i.ibb.co/qNbX6wW/putul-nacer-iti.png",
+        "price": 216,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "পদ্মানদীর মাঝি",
+        "writer_name": "মানিক বন্দ্যোপাধ্যায়",
+        "img": "https://i.ibb.co/rtBGLfg/poddanodir-maji.png",
+        "price": 250,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "জননী",
+        "writer_name": "মানিক বন্দ্যোপাধ্যায়",
+        "img": "https://i.ibb.co/NYX7XjV/jononi.jpg",
+        "price": 87,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "দিবারাত্রির কাব্য",
+        "writer_name": "মানিক বন্দ্যোপাধ্যায়",
+        "img": "https://i.ibb.co/VQpw0Vc/dibaratrir-kabbo.jpg",
+        "price": 280,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "শেষের কবিতা",
+        "writer_name": "রবীন্দ্রনাথ ঠাকুর",
+        "img": "https://i.ibb.co/svVSbyJ/sesher-kobita.jpg",
+        "price": 219,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "অন্তিম",
+        "writer_name": "লতিফুল ইসলাম শিবলী",
+        "img": "https://i.ibb.co/m9JYr76/ontim.jpg",
+        "price": 240,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "লাভ এন্ড ক্যান্ডি",
+        "writer_name": "জাফর বিপি",
+        "img": "https://i.ibb.co/cQC8Pgd/love-and-candy.jpg",
+        "price": 200,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "গল্প সমগ্র",
+        "writer_name": "আহমদ ছফা",
+        "img": "https://i.ibb.co/M9wg5QD/golpo-somogro.jpg",
+        "price": 417,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "গাভি বিত্তান্ত",
+        "writer_name": "আহমদ ছফা",
+        "img": "https://i.ibb.co/G30YGd1/gavi-bittanto.jpg",
+        "price": 117,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "চাঁদের পাহাড়",
+        "writer_name": "বিভূতিভূষণ বন্দ্যোপাধ্যায়",
+        "img": "https://i.ibb.co/RbHnYKJ/chader-pahad.jpg",
+        "price": 237,
+        "reading_time": 5,
+        "reading_price": 0,
+        "upload_time": "4 Feb 2020",
+        "book": 1
+    },
+    {
+        "book_name": "প্রোডাক্টিভ মুসলিম",
+        "writer_name": "মোহাম্মদ ফারিস",
+        "img": "https://i.ibb.co/YLjydQz/productive-muslim.jpg",
+        "price": 260,
+        "reading_time": 8,
+        "reading_price": 0,
+        "upload_time": "15 Jun 2022",
+        "book": 2
+    },
+    {
+        "book_name": "জিবনের গল্প",
+        "writer_name": "আরিফ আজাদ",
+        "img": "https://i.ibb.co/rFycCj9/nobi-jiboner-golpo.jpg",
+        "price": 260,
+        "reading_time": 8,
+        "reading_price": 0,
+        "upload_time": "15 Jun 2022",
+        "book": 2
+    },
+    {
+        "book_name": "মেসেজ",
+        "writer_name": "মিজানুর আজহারী",
+        "img": "https://i.ibb.co/qWwmZLn/message.jpg",
+        "price": 260,
+        "reading_time": 8,
+        "reading_price": 0,
+        "upload_time": "15 Jun 2022",
+        "book": 2
+    },
+    {
+        "book_name": "মা মা এবং বাবা",
+        "writer_name": "আরিফ আজাদ",
+        "img": "https://i.ibb.co/cJqsKGv/ma-ma-and-baba.jpg",
+        "price": 260,
+        "reading_time": 8,
+        "reading_price": 0,
+        "upload_time": "15 Jun 2022",
+        "book": 2
+    },
+    {
+        "book_name": "জিবন যেখানে যেমন",
+        "writer_name": "আরিফ আজাদ",
+        "img": "https://i.ibb.co/GpJwPv2/jibon-jokhon-jemon.jpg",
+        "price": 260,
+        "reading_time": 8,
+        "reading_price": 0,
+        "upload_time": "15 Jun 2022",
+        "book": 2
+    },
+    {
+        "book_name": "দোয়া কবুলের গল্পগুলো",
+        "writer_name": "রাজিব হাসান",
+        "img": "https://i.ibb.co/NF2C6X7/dowa-kobuler-golpo.jpg",
+        "price": 260,
+        "reading_time": 8,
+        "reading_price": 0,
+        "upload_time": "15 Jun 2022",
+        "book": 2
+    },
+    {
+        "book_name": "হারিয়ে যাওয়া ইসলামের ইতিহাস",
+        "writer_name": "ফিরাস আল খাতিব",
+        "img": "https://i.ibb.co/T477m3N/lost-islamic-history.jpg",
+        "price": 390,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "শেষের কবিতা",
+        "writer_name": "মাহমুদ বিন নূর",
+        "img": "https://i.ibb.co/TP0dhFt/dorpon.jpg",
+        "price": 390,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "আনা ফ্রাঙ্কের ডায়েরী",
+        "writer_name": "আনা ফ্রাঙ্ক",
+        "img": "https://i.ibb.co/jWHKZrX/ana-freanker-dairy.jpg",
+        "price": 690,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "তুমি ফিরবে বলে",
+        "writer_name": "জাকারিয়া মাসুদ",
+        "img": "https://i.ibb.co/sjwj1NY/tumi-pirbe-bole.jpg",
+        "price": 360,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "তোমাকে ভালোবাসি হে নবী",
+        "writer_name": "গুরুদত্ত সিং",
+        "img": "https://i.ibb.co/Xsv34cD/tomake-valobasi-he-nobo.jpg",
+        "price": 390,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "টাইম মেনেজমেন্ট",
+        "writer_name": "ইসমাইল কানদার",
+        "img": "https://i.ibb.co/B3KGWKy/time-menagement.jpg",
+        "price": 190,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "অঙ্ক ভাইয়া",
+        "writer_name": "চমক হাসান",
+        "img": "https://i.ibb.co/3p4njPx/onko-vaiya.jpg",
+        "price": 380,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    },
+    {
+        "book_name": "মুক্ত বাতাসের খোঁজে",
+        "writer_name": "লস্ট মডেস্টি",
+        "img": "https://i.ibb.co/BgNLd3W/muktobataser-khoje.jpg",
+        "price": 360,
+        "reading_time": 4,
+        "reading_price": 0,
+        "upload_time": "5 Nov 2022",
+        "book": 1
+    }
+]

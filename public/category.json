@@ -1,0 +1,26 @@
+[
+    {
+        "category": "1",
+        "type": "novel",
+        "category_book": "উপন্যাস",
+        "img": "https://i.ibb.co/RbHnYKJ/chader-pahad.jpg"
+    },
+    {
+        "category": "2",
+        "type": "story",
+        "category_book": "গল্প",
+        "img": "https://i.ibb.co/m9JYr76/ontim.jpg"
+    },
+    {
+        "category": "3",
+        "type": "islamic",
+        "category_book": "ইসলামিক",
+        "img": "https://i.ibb.co/6FJtXJk/the-prophet.jpg"
+    },
+    {
+        "category": "4",
+        "type": "other",
+        "category_book": "অন্যান্য",
+        "img": "https://i.ibb.co/3p4njPx/onko-vaiya.jpg"
+    }
+]

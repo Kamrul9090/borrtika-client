@@ -1,13 +1,31 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebase/firebase'
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 const auth = getAuth(app)
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
+    const [theme, setTheme] = useState(false);
 
+    useEffect(() => {
+        const rootElement = window.document.documentElement;
+        if (theme) {
+            rootElement.classList.add("dark")
+            rootElement.classList.remove("light")
+        } else {
+            rootElement.classList.add("light")
+            rootElement.classList.remove("dark")
+        }
+        const storedTheme = JSON.parse(localStorage.getItem("theme"));
+        setTheme(storedTheme)
+    }, [theme])
+
+    const toggleTheme = () => {
+        setTheme(!theme)
+        localStorage.setItem("theme", !theme)
+    }
     // create user with email password
     const createUser = (email, password) => {
         setLoader(true)
@@ -44,9 +62,22 @@ const AuthProvider = ({ children }) => {
         return () => unsubscribe();
     }, [])
 
+    const authInfo = {
+        user,
+        loader,
+        auth,
+        theme,
+        SignIn,
+        toggleTheme,
+        setLoader,
+        logOut,
+        createUser,
+        userProfile,
+        signInEmailPassword
+    };
     return (
         <div>
-            <AuthContext.Provider>
+            <AuthContext.Provider value={authInfo}>
                 {children}
             </AuthContext.Provider>
         </div>
