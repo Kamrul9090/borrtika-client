@@ -6,7 +6,7 @@ const OurServices = () => {
     const { data: ourServices = [], isLoading } = useQuery({
         queryKey: ["ourServices"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/our_services`);
+            const res = await fetch(`https://brrtika-server.vercel.app/our_services`);
             const data = res.json();
             return data;
         }

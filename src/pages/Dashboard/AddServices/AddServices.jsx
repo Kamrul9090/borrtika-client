@@ -37,7 +37,7 @@ const AddServices = () => {
                         formatDate,
                     }
 
-                    fetch(`http://localhost:5000/add_books`, {
+                    fetch(`https://brrtika-server.vercel.app/add_books`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

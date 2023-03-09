@@ -9,7 +9,7 @@ const BookLayout = () => {
     const { data: categoryData = [], isLoading } = useQuery({
         queryKey: ["categoryData"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/`);
+            const res = await fetch(`https://brrtika-server.vercel.app/`);
             const data = await res.json();
             return data;
         }
@@ -17,7 +17,7 @@ const BookLayout = () => {
 
 
     const handleCheckBox = (data) => {
-        fetch(`http://localhost:5000/category/${data.type}`, {
+        fetch(`https://brrtika-server.vercel.app/category/${data.type}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

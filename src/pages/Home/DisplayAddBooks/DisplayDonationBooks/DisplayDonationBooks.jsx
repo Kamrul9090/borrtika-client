@@ -8,7 +8,7 @@ const DisplayDonationBooks = () => {
     const { data: donationBooks = [], isLoading } = useQuery({
         queryKey: ["donationBooks"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/add_books`);
+            const res = await fetch(`https://brrtika-server.vercel.app/add_books`);
             const data = res.json();
             return data;
         }

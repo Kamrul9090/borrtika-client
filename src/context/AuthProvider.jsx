@@ -9,6 +9,18 @@ const AuthProvider = ({ children }) => {
     const [loader, setLoader] = useState(true);
     const [theme, setTheme] = useState(false);
 
+    // Modal 
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    console.log(modalIsOpen);
+
+    const OpenModal = () => {
+        setModalIsOpen(true)
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false)
+    }
+
     useEffect(() => {
         const rootElement = window.document.documentElement;
         if (theme) {
@@ -73,6 +85,9 @@ const AuthProvider = ({ children }) => {
         logOut,
         createUser,
         userProfile,
+        modalIsOpen,
+        OpenModal,
+        closeModal,
         signInEmailPassword
     };
     return (

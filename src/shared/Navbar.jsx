@@ -52,7 +52,7 @@ const Navbar = () => {
                         user?.photoURL ?
                             <img alt="" className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 ring-green-500 ring-offset-gray-800" src={user?.photoURL} />
                             :
-                            <ImUser className='w-10 h-10'></ImUser>
+                            <ImUser className='w-10 h-10 text-green-800'></ImUser>
                     }
                 </div>
                 <div className={`flex-shrink-0 lg:hidden ${isOpen ? "hidden" : "block"} space-y-5 w-40 absolute left-48 top-20 bg-gray-300 text-center py-3 z-40`}>

@@ -3,8 +3,9 @@ import Carousel from 'react-grid-carousel'
 import { BarLoader } from 'react-spinners';
 import { AuthContext } from '../../../context/AuthProvider';
 import { Button } from '../../../components/Button/Button';
+import Modal from '../../../components/Modal/Modal';
 const Books = ({ categoriesData }) => {
-    const { loader } = useContext(AuthContext)
+    const { loader, OpenModal, modalIsOpen, closeModal } = useContext(AuthContext)
     if (loader) {
         <BarLoader></BarLoader>
     }
@@ -24,12 +25,13 @@ const Books = ({ categoriesData }) => {
                                 <span>Reading price {val.reading_price} FREE</span>
                                 <span>Time {val.reading_time} Days</span>
                                 <span>Available {val.book} piece</span>
-                                <Button>Take for Read</Button>
+                                <button className='bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl' onClick={OpenModal}>Take for Read</button>
                             </div>
                         </div>
                     </Carousel.Item>
                 ))}
             </Carousel>
+            <Modal modalIsOpen={modalIsOpen} onClose={closeModal} />
         </div>
     );
 };

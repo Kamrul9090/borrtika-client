@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import Modal from '../../../components/Modal/Modal';
+import { AuthContext } from '../../../context/AuthProvider';
 import BookLayout from '../AllBoooks/BookLayout';
 import Category from '../BooksCategory/Category';
 import DisplayAddBooks from '../DisplayAddBooks/DisplayAddBooks';

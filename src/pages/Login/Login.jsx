@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../context/AuthProvider';
 import img from '../../assets/logo/4957136.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
     const { SignIn, signInEmailPassword } = useContext(AuthContext)
     const { register, handleSubmit, reset, watch, formState: { errors, isSubmitting } } = useForm();
     const googleProvider = new GoogleAuthProvider();
-
+    const navigate = useNavigate()
     const [error, setError] = useState({
         signInError: "",
         googleError: "",
@@ -44,12 +44,14 @@ const Login = () => {
         return promise;
     }
     const handleGoogleSignIn = () => {
-        console.log("dbajsbhj");
         SignIn(googleProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
-                toast.success("Login With Google success")
+                if (user) {
+                    toast.success("Login With Google success");
+                    navigate('/')
+                }
+
             })
             .catch(err => {
                 setError({ ...error, googleError: err })

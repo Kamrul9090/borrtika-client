@@ -5,13 +5,13 @@ const Category = () => {
     const [categories, setCategories] = useState([]);
     const [categoryData, setCategoryData] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/`)
+        fetch(`https://brrtika-server.vercel.app/`)
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
 
     const setId = (categoryBook) => {
-        fetch(`http://localhost:5000/category/${categoryBook?._id}`, {
+        fetch(`https://brrtika-server.vercel.app/category/${categoryBook?._id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -9,7 +9,7 @@ const DisplaySellerBooks = () => {
     const { data: sellerBooks = [], isLoading } = useQuery({
         queryKey: ["sellerBooks"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/seller_books`);
+            const res = await fetch(`https://brrtika-server.vercel.app/seller_books`);
             const data = res.json();
             return data;
         }

@@ -130,19 +130,23 @@ const SignUp = () => {
                                     id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                                 {errors.password && <small role="alert" className='text-red-500'>{errors.password?.message}</small>}
                             </div>
-                            <div className='flex items-center justify-around'>
-                                <div className='space-x-2'>
-                                    <input onClick={() => setCheck(!check)}
-                                        {...register("user")} type="checkbox" name="user" id="user" value="user" className={`${check} ? "checked" : "unchecked"`} disabled={isCheck} />
-                                    <label htmlFor="user">I am user</label>
+                            <fieldset className='border-2 p-4'>
+                                <legend>Role</legend>
+                                <div className='flex items-center justify-around'>
+                                    <div className='space-x-2'>
+                                        <input onClick={() => setCheck(!check)}
+                                            {...register("user")} type="checkbox" name="user" id="user" value="user" className={`${check} ? "checked" : "unchecked"`} disabled={isCheck} />
+                                        <label htmlFor="user">I am user</label>
+                                    </div>
+                                    <div className='space-x-2'>
+                                        <input onClick={() => setIsCheck(!isCheck)}
+                                            {...register("buyer")} type="checkbox" name="buyer"
+                                            className={`${isCheck} ? "checked" : "unchecked"`} id="buyer" value="buyer" disabled={check} />
+                                        <label htmlFor="buyer">I am buyer</label>
+                                    </div>
                                 </div>
-                                <div className='space-x-2'>
-                                    <input onClick={() => setIsCheck(!isCheck)}
-                                        {...register("buyer")} type="checkbox" name="buyer"
-                                        className={`${isCheck} ? "checked" : "unchecked"`} id="buyer" value="buyer" disabled={check} />
-                                    <label htmlFor="buyer">I am buyer</label>
-                                </div>
-                            </div>
+
+                            </fieldset>
                         </div>
                         <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-green-900  text-gray-100 dark:bg-green-900 dark:text-gray-100">Sign in</button>
                     </form>

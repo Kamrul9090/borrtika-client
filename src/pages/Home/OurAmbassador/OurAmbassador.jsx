@@ -8,7 +8,7 @@ const OurAmbassador = () => {
     const { data: ourAmbassador = [], isLoading } = useQuery({
         queryKey: ["ourAmbassador"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/our_ambassador`);
+            const res = await fetch(`https://brrtika-server.vercel.app/our_ambassador`);
             const data = res.json();
             return data;
         }
