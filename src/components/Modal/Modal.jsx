@@ -3,7 +3,6 @@ import { AuthContext } from '../../context/AuthProvider';
 import { Button } from '../Button/Button';
 const Modal = ({ modalIsOpen, onClose }) => {
     const { user } = useContext(AuthContext);
-    const { displayName, email } = user;
     return (
         <>
             <div className={`${modalIsOpen ? 'block' : 'hidden'} relative`}>
