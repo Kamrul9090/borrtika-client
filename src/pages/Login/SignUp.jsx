@@ -11,7 +11,6 @@ const SignUp = () => {
     const { register, handleSubmit, reset, watch, formState: { errors, isSubmitting } } = useForm();
     const [check, setCheck] = useState(false);
     const [isCheck, setIsCheck] = useState(false);
-    console.log(check, isCheck);
     const googleProvider = new GoogleAuthProvider();
 
     const [error, setError] = useState({
@@ -20,7 +19,7 @@ const SignUp = () => {
     });
 
     const onSubmit = (data) => {
-        console.log(data);
+        console.log(data.role.value);
         const profile = {
             displayName: data.name,
         }
@@ -28,9 +27,14 @@ const SignUp = () => {
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 userProfile(profile)
                     .then(() => {
+                        const add_user = {
+                            name: user.displayName,
+                            email: user.email,
+                            role: data.role
+                        }
+                        console.log(add_user);
                         reset();
                         toast.success("Your account successfully created", {
                             style: {
@@ -85,7 +89,6 @@ const SignUp = () => {
                             <button onClick={() => setIsActive(!isActive)} className={`uppercase text border-b-2 font-bold  ${!isActive ? 'border-b-2 text-green-700 border-green-700' : 'text-gray-500 border-gray-500'}`}>sign Up</button>
                         </Link>
                     </div>
-                    <button></button>
                     <div className="space-y-4">
                         <button onClick={handleGoogleSignIn} aria-label="Login with Google" type="button" className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-green-900">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5 fill-current">

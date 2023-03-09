@@ -11,7 +11,6 @@ const AuthProvider = ({ children }) => {
 
     // Modal 
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    console.log(modalIsOpen);
 
     const OpenModal = () => {
         setModalIsOpen(true)
