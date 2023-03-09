@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { Buttonlg } from '../../../components/Button/Button';
+import Modal from '../../../components/Modal/Modal';
 
 const DisplayAddBooks = () => {
     return (
@@ -14,6 +15,7 @@ const DisplayAddBooks = () => {
             </div>
             <div className='w-3/4 border-2 max-h-96 p-2 text-center shadow-lg rounded-md'>
                 <Outlet></Outlet>
+                <Modal></Modal>
             </div>
         </div>
     );

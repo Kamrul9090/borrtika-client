@@ -4,8 +4,7 @@ import { AuthContext } from '../../../context/AuthProvider';
 import { BarLoader } from 'react-spinners';
 
 const BookCarouse = ({ categoriesData }) => {
-    const { loader, OpenModal } = useContext(AuthContext)
-    console.log(categoriesData);
+    const { loader } = useContext(AuthContext)
     if (loader) {
         <BarLoader></BarLoader>
     }
@@ -25,7 +24,7 @@ const BookCarouse = ({ categoriesData }) => {
                                 <span>Reading price {val.reading_price} FREE</span>
                                 <span>Time {val.reading_time} Days</span>
                                 <span>Available {val.book} piece</span>
-                                <button type='submit' className='bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl' onClick={OpenModal}>Take for Read</button>
+                                <label htmlFor="my-modal-3" className="className=' bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl onClick={OpenModal}">Take for Read</label>
                             </div>
                         </div>
                     </Carousel.Item>

@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import { BarLoader } from 'react-spinners';
 import { Button } from '../../../../components/Button/Button';
 import Carousel from 'react-grid-carousel'
+import Modal from '../../../../components/Modal/Modal';
 
 const DisplayDonationBooks = () => {
     const { data: donationBooks = [], isLoading } = useQuery({
@@ -35,7 +36,7 @@ const DisplayDonationBooks = () => {
                                     <span> {val.seller_name}</span>
                                     <span>Available {val.book} books</span>
                                 </div>
-                                <Button>Take for Read</Button>
+                                <label htmlFor="my-modal-3" className="className=' bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl onClick={OpenModal}">Take for Read</label>
                             </div>
                         </div>
                     </Carousel.Item>

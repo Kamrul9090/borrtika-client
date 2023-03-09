@@ -41,7 +41,7 @@ const DisplaySellerBooks = () => {
                                     <span>seller {val.seller_name}</span>
                                     <span>use {val.use} years</span>
                                 </div>
-                                <Link to='/payment'><Button>Buy Now</Button></Link>
+                                <label htmlFor="my-modal-3" className="className=' bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl onClick={OpenModal}">Buy It</label>
                             </div>
                         </div>
                     </Carousel.Item>
