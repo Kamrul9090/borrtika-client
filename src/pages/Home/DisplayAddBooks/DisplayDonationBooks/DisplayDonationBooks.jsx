@@ -1,9 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { BarLoader } from 'react-spinners';
-import { Button } from '../../../../components/Button/Button';
 import Carousel from 'react-grid-carousel'
-import Modal from '../../../../components/Modal/Modal';
 
 const DisplayDonationBooks = () => {
     const { data: donationBooks = [], isLoading } = useQuery({
@@ -14,10 +12,11 @@ const DisplayDonationBooks = () => {
             return data;
         }
     })
+
+
     if (isLoading) {
         return <BarLoader></BarLoader>
     }
-    console.log(donationBooks);
     return (
         <div>
             <Carousel cols={2} showDots loop>
@@ -25,7 +24,7 @@ const DisplayDonationBooks = () => {
                     <Carousel.Item key={i}>
                         <div className=' w-full max-h-full'>
                             <div className=''>
-                                <img src={val.img} className="w-full max-h-48" />
+                                <img src={val.img} className="w-full max-h-48" alt='' />
                             </div>
                             <div className='flex flex-col text-sm dark:text-gray-100 w-full pt-2 max-h-96 font-semibold'>
                                 <div className='flex justify-around'>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '../../components/Button/Button';
 import love1 from '../../assets/svg/love-svgrepo-com.svg'
 import love2 from '../../assets/svg/love-svgrepo-com (1).svg'

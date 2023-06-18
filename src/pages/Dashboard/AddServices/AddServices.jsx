@@ -15,7 +15,6 @@ const AddServices = () => {
         const picture = data.img[0];
         const formData = new FormData();
         formData.append("image", picture);
-
         const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
         fetch(url, {
             method: 'POST',

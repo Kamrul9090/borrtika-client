@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-grid-carousel'
-import { Button } from '../../../../components/Button/Button';
 import { BarLoader } from 'react-spinners';
 import { useQuery } from 'react-query';
-import { Link } from 'react-router-dom';
+import Modal from '../../../../components/Modal/Modal';
 
 const DisplaySellerBooks = () => {
-    const { data: sellerBooks = [], isLoading } = useQuery({
+    const [bookingData, setBookingData] = useState([])
+    const { book_name, resale_price } = bookingData;
+    const { data: sellerBooks = [], refetch, isLoading } = useQuery({
         queryKey: ["sellerBooks"],
         queryFn: async () => {
             const res = await fetch(`https://brrtika-server.vercel.app/seller_books`);
@@ -17,8 +18,14 @@ const DisplaySellerBooks = () => {
     if (isLoading) {
         return <BarLoader></BarLoader>
     }
-    console.log(sellerBooks);
 
+    const handleBuyBooks = (id) => {
+        fetch(`http://localhost:5000/seller_books/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setBookingData(data)
+            })
+    }
     return (
         <div>
             <Carousel cols={2} showDots loop>
@@ -26,7 +33,7 @@ const DisplaySellerBooks = () => {
                     <Carousel.Item key={i}>
                         <div className=' w-full max-h-full'>
                             <div className=''>
-                                <img src={val.img} className="w-full max-h-48" />
+                                <img src={val.img} className="w-full max-h-48" alt='' />
                             </div>
                             <div className='flex flex-col text-sm dark:text-gray-100 w-full pt-2 max-h-96 font-semibold'>
                                 <div className='flex justify-around'>
@@ -41,12 +48,14 @@ const DisplaySellerBooks = () => {
                                     <span>seller {val.seller_name}</span>
                                     <span>use {val.use} years</span>
                                 </div>
-                                <label htmlFor="my-modal-3" className="className=' bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl onClick={OpenModal}">Buy It</label>
+                                <label onClick={() => handleBuyBooks(val._id)} htmlFor="my-modal-3" className="className=' bg-green-900 text-white hover:bg-green-400 p-2 rounded-xl">Buy It</label>
                             </div>
                         </div>
                     </Carousel.Item>
                 ))}
             </Carousel>
+
+            <Modal bookingData={bookingData} book_name={book_name} resale_price={resale_price} ></Modal>
         </div>
     );
 };

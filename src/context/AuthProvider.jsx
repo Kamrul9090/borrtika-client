@@ -1,25 +1,15 @@
 import React, { createContext, useEffect, useState } from 'react';
-import app from '../firebase/firebase'
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
-export const AuthContext = createContext(null);
-
+import app from '../firebase/firebase'
+import { json } from 'react-router-dom';
+export const AuthContext = createContext(null)
 const auth = getAuth(app)
+
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
     const [theme, setTheme] = useState(false);
-
-    // Modal 
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const OpenModal = () => {
-        setModalIsOpen(true)
-    }
-
-    const closeModal = () => {
-        setModalIsOpen(false)
-    }
-
+    console.log(theme);
     useEffect(() => {
         const rootElement = window.document.documentElement;
         if (theme) {
@@ -35,8 +25,12 @@ const AuthProvider = ({ children }) => {
 
     const toggleTheme = () => {
         setTheme(!theme)
+
+        // save the value to the local storage
         localStorage.setItem("theme", !theme)
+
     }
+    console.log(user);
     // create user with email password
     const createUser = (email, password) => {
         setLoader(true)
@@ -84,9 +78,6 @@ const AuthProvider = ({ children }) => {
         logOut,
         createUser,
         userProfile,
-        modalIsOpen,
-        OpenModal,
-        closeModal,
         signInEmailPassword
     };
     return (

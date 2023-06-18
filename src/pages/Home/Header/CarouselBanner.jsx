@@ -1,5 +1,4 @@
 import React from 'react';
-import banner1 from '../../../assets/banner/banner (1).jpg'
 import banner2 from '../../../assets/banner/banner (2).jpg'
 import banner3 from '../../../assets/banner/banner (3).jpg'
 import banner5 from '../../../assets/banner/banner (5).jpg'

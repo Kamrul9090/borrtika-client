@@ -18,22 +18,24 @@ const OurAmbassador = () => {
     }
     return (
         <>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-5xl mx-auto my-20'>
-                <div className='max-w-5xl mx-auto'>
-                    <div className='flex items-center dark:text-gray-100'>
-                        <img src={ambassador} className="w-24 h-24" alt="" srcset="" />
-                        <div className='flex flex-col ml-4'>
-                            <h1 className='text-2xl'>Our Regional Ambassador</h1>
-                            <p className=''>Connect our regional ambassador.You can shared <br /> your opinion and also get you help about us.</p>
-                        </div>
+
+            <div className='w-full lg:w-1/2 mx-auto'>
+                <div className='flex items-center dark:text-gray-100'>
+                    <img src={ambassador} className="w-24 h-24" alt="" srcset="" />
+                    <div className='flex flex-col ml-4'>
+                        <h1 className='text-2xl'>Our Regional Ambassador</h1>
+                        <p className=''>Connect our regional ambassador.You can shared <br /> your opinion and also get you help about us.</p>
                     </div>
                 </div>
+            </div>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-5xl mx-auto my-20'>
+
                 {
-                    ourAmbassador.map(ambassador => <div className="max-w-md p-8 sm:flex sm:space-x-6 dark:bg-gray-900 dark:text-gray-100 items-center shadow-xl">
-                        <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
+                    ourAmbassador.map(ambassador => <div className="w-11/12 p-5 auto mx-auto sm:flex sm:space-x-6 dark:bg-gray-900 dark:text-gray-100 items-center justify-center shadow-xl">
+                        <div className="flex-shrink-0 w-full mb-6 h-[70%] sm:w-32 sm:mb-0">
                             <img src={ambassador.img} alt="" className="object-cover object-center w-full h-full rounded dark:bg-gray-500" />
                         </div>
-                        <div className="flex flex-col space-y-2">
+                        <div className="flex flex-col">
                             <div>
                                 <h2 className="text-xl font-semibold">{ambassador.name}</h2>
                                 <span className="text-sm dark:text-gray-400">{ambassador.position}</span>
@@ -60,7 +62,7 @@ const OurAmbassador = () => {
                         </div>
                     </div>)
                 }
-                <div className=''>
+                {/* <div className=''>
                     <div className='text-center flex items-center justify-evenly pt-5'>
                         <img src={connection} className="w-24 h-24" alt="" srcset="" />
                         <div className='flex flex-col items-center'>
@@ -70,7 +72,7 @@ const OurAmbassador = () => {
                             </a></p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );

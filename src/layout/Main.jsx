@@ -1,6 +1,5 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../pages/Home/Header/Header';
 import Footer from '../shared/Footer';
 import Navbar from '../shared/Navbar';
 

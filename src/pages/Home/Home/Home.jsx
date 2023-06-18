@@ -8,6 +8,8 @@ import CarouselBanner from '../Header/CarouselBanner';
 import Header from '../Header/Header';
 import OurAmbassador from '../OurAmbassador/OurAmbassador';
 import OurServices from '../OurServices/OurServices';
+import FreeBookBlog from '../ServiceBlog/FreeBookBlog';
+import ContactUs from './ContactUs/ContactUs';
 
 const Home = () => {
     return (
@@ -17,8 +19,10 @@ const Home = () => {
             <Category></Category>
             <BookLayout></BookLayout>
             <DisplayAddBooks></DisplayAddBooks>
+            <FreeBookBlog></FreeBookBlog>
             <OurServices></OurServices>
             <OurAmbassador></OurAmbassador>
+            <ContactUs></ContactUs>
         </div>
     );
 };

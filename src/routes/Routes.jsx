@@ -12,6 +12,7 @@ import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import Member from "../pages/Member/Member";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
                 path: '/home',
                 element: <Home></Home>
             },
+            {
+                path: '/member',
+                element: <Member></Member>
+            },
 
             {
                 path: '/category/:id',
@@ -34,13 +39,35 @@ export const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://brrtika-server.vercel.app/category/${params.id}`)
             },
             {
-                path: '/category/novel',
-                element: <Home><Books></Books></Home>
+                path: '/',
+                element: <Home><Books></Books></Home>,
+                children: [
+                    {
+                        path: '/category/novel',
+                        element: <Books></Books>
+                    },
+                    {
+                        path: '/category/story',
+                        element: <Books></Books>
+                    },
+                    {
+                        path: '/category/islamic',
+                        element: <Books></Books>
+                    },
+                    {
+                        path: '/category/other',
+                        element: <Books></Books>
+                    },
+                ]
             },
-            {
-                path: '/category/story',
-                element: <Home><Books></Books></Home>
-            },
+            // {
+            //     path: '/category/novel',
+            //     element: <Home><Books></Books></Home>
+            // },
+            // {
+            //     path: '/category/story',
+            //     element: <Home><Books></Books></Home>
+            // },
             {
                 path: '/category/islamic',
                 element: <Home><Books></Books></Home>

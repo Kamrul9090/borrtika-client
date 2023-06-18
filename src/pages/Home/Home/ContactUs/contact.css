@@ -1,0 +1,8 @@
+.bg_contact {
+    background-image: url(../../../../assets/home-showcase/books-2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: fixed;
+    box-shadow: inset 0 0 0 2000px rgba(8, 8, 8, 0.689);
+}
