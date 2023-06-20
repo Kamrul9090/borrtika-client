@@ -39,7 +39,7 @@ const FreeBookBlog = () => {
                         </p>
                     </div>
 
-                    <Button>Read Now</Button>
+                    <Button>Donate Now</Button>
                 </div>
                 <div className='relative'>
                     <img src={blogImage2} alt="" srcset="" className='w-2/3 h-5/6 mx-auto relative z-40 rounded-md' />
