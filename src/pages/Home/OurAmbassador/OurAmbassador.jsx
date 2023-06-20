@@ -3,7 +3,6 @@ import { useQuery } from 'react-query';
 import { BarLoader } from 'react-spinners';
 import { ImLocation2 } from "react-icons/im";
 import ambassador from '../../../assets/logo/announcement.png'
-import connection from '../../../assets/logo/internet.png'
 const OurAmbassador = () => {
     const { data: ourAmbassador = [], isLoading } = useQuery({
         queryKey: ["ourAmbassador"],
@@ -62,17 +61,7 @@ const OurAmbassador = () => {
                         </div>
                     </div>)
                 }
-                {/* <div className=''>
-                    <div className='text-center flex items-center justify-evenly pt-5'>
-                        <img src={connection} className="w-24 h-24" alt="" srcset="" />
-                        <div className='flex flex-col items-center'>
-                            <h1 className='text-3xl'>Join With us</h1>
-                            <p className='font-bold hover:underline hover:text-green-900'><a href="https://www.facebook.com/groups/1516210658549651">
-                                বর্তিকা,রামগড়,খাগড়াছড়ি।
-                            </a></p>
-                        </div>
-                    </div>
-                </div> */}
+
             </div>
         </>
     );

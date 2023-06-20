@@ -10,6 +10,7 @@ import OurAmbassador from '../OurAmbassador/OurAmbassador';
 import OurServices from '../OurServices/OurServices';
 import FreeBookBlog from '../ServiceBlog/FreeBookBlog';
 import ContactUs from './ContactUs/ContactUs';
+import FaQ from './FaQ/FaQ';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <FreeBookBlog></FreeBookBlog>
             <OurServices></OurServices>
             <OurAmbassador></OurAmbassador>
+            <FaQ></FaQ>
             <ContactUs></ContactUs>
         </div>
     );

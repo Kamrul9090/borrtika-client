@@ -1,11 +1,15 @@
 import React from 'react';
-import './contact.css'
+import './contact.css';
+import book from '../../../../assets/logo/book.png';
+
 const ContactUs = () => {
     return (
         <>
             <div className="bg_contact">
                 <div className='max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2'>
-                    <div></div>
+                    <div className='h-96'>
+                        <img src={book} alt="" className='h-full' />
+                    </div>
                     <div className='p-5'>
                         <h3 className='text-3xl font-bold text-white'>Contact Us</h3>
                         <form className='space-y-5'>
